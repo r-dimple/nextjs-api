@@ -11,6 +11,8 @@ export default function Home() {
         <br/>
         <Link href="/productlist/editproduct">EDIT Product List</Link>
         </h1>
+        <br/><br/>
+        <Link href="/upload">Image</Link>
     </main>
   );
 }

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Deleteproduct from "../deleteProduct/page";
+
 
 const getProducts = async () =>{
     let data = await fetch("http://localhost:3000/products");
@@ -31,7 +33,10 @@ export default async function Page(){
                             <td>{item.color}</td>
                             <td>{item.company}</td>
                             <td>{item.category}</td>
-                            <td><Link href={"productlist/"+item._id}>Edit</Link></td>
+                            <td>
+                                <Link href={"productlist/"+item._id}>Edit</Link>
+                            </td>
+                            <td> <Deleteproduct id={item._id}/>DELETE </td>
                             </tr>
                         ))
                     }

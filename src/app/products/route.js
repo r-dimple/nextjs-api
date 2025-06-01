@@ -51,3 +51,4 @@ export async function POST(request){
   const result = await product.save();
   return NextResponse.json({result,success:true},{status:200})
 }
+
